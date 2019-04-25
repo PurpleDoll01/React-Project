@@ -7,6 +7,15 @@ import Footer from './components/Footer.jsx';
 import logoPortada from './images/invie.png';
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png';
+import cheet from 'cheet.js';
+
+cheet('i n v i e', () => {
+  console.log('yay');
+})
+
+cheet('g o b a c k', () => {
+  console.log('So boring');
+})
 
 const data = {
    menu:[
