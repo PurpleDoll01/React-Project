@@ -9,9 +9,9 @@ class Guitarras extends Component {
           this.props.guitarras.map((guitarras, index) => {
             return (
               <article class="guitarra" key={index}>
-                <img class="derecha" src={guitarras.image}  alt={guitarras.alt} width="350"/>
-                <div class="contenedor-guitarra-a">
-                  <h3 class="title-b">{guitarras.name}</h3>
+                <img class="guitarra-image" src={guitarras.image}  alt={guitarras.alt} width="350"/>
+                <div class="contenedor-guitarra">
+                  <h3 class="guitarra-name">{guitarras.name}</h3>
                   <ol>
                     {guitarras.features.map((feature, index) => {
                       return (
