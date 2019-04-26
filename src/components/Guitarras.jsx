@@ -28,7 +28,13 @@ class Guitarras extends Component {
                   alt={guitarras.alt}
                   width="350"/>
                 </CSSTransitionGroup>
-                <div class="contenedor-guitarra">
+                <CSSTransitionGroup
+                  transitionName="fade"
+                  transitionEnterTimeout={300}
+                  transitionLeaveTimeout={300}
+                  transitionLeave={false}
+                >
+                  <div class="contenedor-guitarra" key={guitarras.name}>
                   <h3 class="guitarra-name">{guitarras.name}</h3>
                   <ol>
                     {guitarras.features.map((feature, index) => {
@@ -37,7 +43,8 @@ class Guitarras extends Component {
                       )
                     })}
                   </ol>
-                </div>
+                  </div>
+                </CSSTransitionGroup>
               </article>
             )
           })
