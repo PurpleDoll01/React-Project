@@ -6,6 +6,7 @@ import Invie from './Invie';
 import * as serviceWorker from './serviceWorker';
 import cheet from 'cheet.js';
 import logoPortada from './images/invie.png';
+import logoPlatzi from './images/platzi.png';
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png';
 import { Provider } from 'react-redux';
@@ -15,7 +16,8 @@ import easterB from './images/easter-b.png';
 
 
 const initialState = {
-   menu:[
+  isAnimated: false,
+  menu:[
     {
       href: 'index.html',
       title: 'Home'
@@ -73,13 +75,12 @@ function reducer(state,action) {
 const store = createStore(reducer, initialState);
 
 const easter = {
+  isAnimated: 'is-animated',
   menu:[
-   {
-     href: 'index.html',
-     title: 'Home'
-   },
+
  ],
- guitarras: [
+  logoPortada: logoPlatzi,
+  guitarras: [
    {
      image: easterA,
      alt: 'Guitarra padre de familia',
